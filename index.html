@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar coding</title>
+    <title>U STUDIO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <nav>
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <h3>Belajar coding</h3>
+                    <h3>U STUDIO</h3>
                 </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#content">Content</a></li>
-                    <li><a href="footer">Footer</a></li>
+                    <li><a href="#footer">Footer</a></li>
                 </ul>
             </div>
         </div>
@@ -44,21 +47,21 @@
                 <h1>Our Content</h1>
             </div>
             <div class="content-card">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="600">
                         <img src="content1.jpg" alt="">
                     <div class="card-body">
                         <h3>Card 1</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800">
                         <img src="content2.jpg" alt="">
                     <div class="card-body">
                         <h3>Card 1</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="1000">
                         <img src="content1.jpg" alt="">
                     <div class="card-body">
                         <h3>Card 1</h3>
@@ -69,5 +72,28 @@
         </div>
     </section>
 
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2>U STUDIO</h2>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab 
+                    aliquam cupiditate reprehenderit iste quaerat nemo numquam odit. 
+                    Corporis, debitis fugit voluptatem dolorem iste veritatis totam voluptates 
+                    saepe omnis libero hic? </p>
+                <div class="footer-desc">
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
