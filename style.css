@@ -55,7 +55,7 @@ nav {
 
 .home {
     background-image: url(bg.jpg);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -80,11 +80,15 @@ nav {
     background-color: #ffffff;
     padding: 8px 50px;
     border-radius: 8px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
 }
 
 .home .home-button:hover {
@@ -95,7 +99,11 @@ nav {
     font-size: 20px;
     text-decoration: none;
     color: black;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
 }
 
 .home .home-button a:hover {
@@ -139,8 +147,8 @@ nav {
 .card {
     flex-basis: 30%;
     max-width: 30%;
-    height: 500px;
-    max-height: 500px;
+    height: 530px;
+    max-height: 530px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -155,7 +163,7 @@ nav {
 
 .card img {
     background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background-attachment: fixed;
     background-size: cover;
     width: 100%;
     max-width: 100%;
@@ -173,12 +181,52 @@ nav {
     padding: 10px;
 }
 
+.card-button {
+    margin-top: 10px;
+    background-color: #634100;
+    padding: 10px 50px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+}
+
+.card-button:hover {
+    margin-top: 10px;
+    background-color: #3a2600;
+    padding: 10px 50px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+}
+
+.card-button a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 .footer {
     background-color: #634100;
     height: 40vh;
     width: 100%;
+    margin-top: 50px;
 }
 
 .footer-content {
@@ -235,6 +283,128 @@ nav {
     color: black;
 }
 
+
+
+.detail {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.detail-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 100%;
+}
+
+.detail-img {
+    display: flex;
+    flex-basis: 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.detail-img img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.detail-desc {
+    display: flex;
+    flex-basis: 50%;
+    width: 50%;
+    height: 100%;
+    padding: 20px 20px;
+    border: 1px solid #634100;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.detail-desc h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-desc p {
+    margin-bottom: 20px;
+}
+
+.detail-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+}
+
+.detail-button .button-back {
+    background-color: #634100;
+    padding: 10px 50px;
+    border-radius: 8px;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.detail-button .button-wa {
+    background-color: #634100;
+    padding: 10px 70px;
+    border-radius: 8px;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.detail-button .button-wa a i {
+    font-size: 20px;
+}
+
+.detail-button a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .detail {
+        height: 220vh;
+    }
+    .detail-content {
+        flex-direction: column;
+    }
+
+    .detail-img {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .detail-desc {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .content {
         height: 180vh;
@@ -243,6 +413,9 @@ nav {
         flex-basis: 45%;
         max-width: 45%;
     }
+    .detail {
+        height: 200vh;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -250,20 +423,44 @@ nav {
         width: 50%;
     }
     .card {
-        flex-basis: 100%; 
+        flex-basis: 100%;
         max-width: 100%;
     }
     .content {
         height: 250vh;
     }
     .footer {
+        margin-top: 100px;
         height: 60vh;
     }
     .footer .footer-desc {
         width: 80%;
     }
+    .detail {
+        height: 150vh;
+    }
+    .detail-img {
+        height: 50%;
+    }
+    
+    .detail-img img {
+        height: 90%;
+        padding: 0 10px;
+    }
+    .detail-button .button-back {
+        padding: 10px 30px;
+    }
+    
+    .detail-button .button-wa {
+        padding: 10px 50px;
+    }
 }
 
+@media screen and (max-width: 466px) {
+    .detail {
+        height: 180vh;
+    }
+}
 
 @media screen and (max-width: 452px) {
     .navbar {
@@ -280,7 +477,7 @@ nav {
 @media screen and (max-width: 380px) {
     nav h3 {
         font-size: 14px;
-    }
+    }   
     nav a {
         font-size: 12px;
     }
