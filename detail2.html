@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .slider {
+            display: flex;
+            width: auto;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 70%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .prev-btn {
+            left: 110px;
+        }
+        .next-btn {
+            right: 700px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -29,7 +58,13 @@
         <div class="container">
             <div class="detail-content">
                 <div class="detail-img">
-                    <img src="content2.jpg" alt="">
+                    <div class="slider">
+                        <img src="content1.jpg" alt="" class="slider-image">
+                        <img src="content2.jpg" alt="" class="slider-image">
+                        <img src="content3.jpg" alt="" class="slider-image">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide()">&#10095;</button>
                 </div>
                 <div class="detail-desc">
                     <h2>Detail 2</h2>
@@ -54,6 +89,32 @@
             </div>
         </div>  
     </main>
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+    
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+    
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+    
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slider-image");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(-" + (slideIndex - 1) * 100 + "%)";
+            }
+        }
+    </script>
+    
 
     <footer class="footer" id="footer">
         <div class="container">
