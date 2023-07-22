@@ -8,6 +8,98 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .slider {
+            display: flex;
+            width: auto;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 80%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .prev-btn {
+            left: 110px;
+        }
+        .next-btn {
+            right: 700px;
+        }
+        @media screen and (max-width: 1115px) {
+            .next-btn {
+                right: 550px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .prev-btn, .next-btn {
+                position: absolute;
+                top: 100%;
+                transform: translateY(-50%);
+                background: transparent;
+                border: none;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .next-btn {
+                right: 114px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .prev-btn, .next-btn {
+                top: 90%;
+            }
+        }
+        @media screen and (max-width: 668px) {
+            .prev-btn, .next-btn {
+                top: 80%;
+            }
+            .prev-btn {
+            left: 75px;
+            }
+            .next-btn {
+                right: 75px;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .detail-img img {
+                padding: 0 60px;
+            }
+            .prev-btn, .next-btn {
+                top: 60%;
+            }
+        }
+        @media screen and (max-width: 470px) {
+            .prev-btn, .next-btn {
+                top: 55%;
+            }
+        }
+        @media screen and (max-width: 460px) {
+            .prev-btn, .next-btn {
+                top: 65%;
+            }
+            .detail-img img {
+                padding: 0 10px;
+            }
+            .prev-btn {
+                left: 30px;
+            }
+            .next-btn {
+                right: 30px;
+            }
+        }
+            
+    </style>
 </head>
 <body>
     <nav>
@@ -29,31 +121,70 @@
         <div class="container">
             <div class="detail-content">
                 <div class="detail-img">
-                    <img src="content3.jpg" alt="">
+                    <div class="slider">
+                        <img src="content3.jpg" alt="" class="slider-image">
+                        <img src="content2.jpg" alt="" class="slider-image">
+                        <img src="content1.jpg" alt="" class="slider-image">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide()">&#10095;</button>
                 </div>
                 <div class="detail-desc">
-                    <h2>Detail 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatumLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, 
-                        </p>
+                    <div class="detail-desc-title">
+                        <h2>Detail 3</h2>
+                    </div>
+                    <div class="detail-desc-content">
+                        <div class="detail-desc-one">
+                            <ul>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                            </ul>
+                        </div>
+                        <div class="detail-desc-two">
+                            <ul>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="detail-button">
                         <div class="button-back">
                             <a href="./index.html">Kembali</a>
                         </div>
                         <div class="button-wa">
-                            <a href="https://wa.me/62895334967287?text=Halo%20kak,%20permisi,%20Saya%20mau%20%20konsultasi%20terkait%20jasa%20dari%20Sunshine%20ini" target="_blank><i class="fa fa-whatsapp"></i> </a>
+                            <a href="https://wa.me/62895334967287?text=Halo%20kak" target="_blank"><i class="fa fa-whatsapp"></i> </a>
                         </div> 
                     </div>
                 </div>
             </div>
         </div>  
     </main>
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slider-image");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(-" + (slideIndex - 1) * 100 + "%)";
+            }
+        }
+    </script>
 
     <footer class="footer" id="footer">
         <div class="container">
@@ -62,10 +193,9 @@
                 <p> Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kulon, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53141</p>
                 <div class="footer-desc">
                     <ul>
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
-                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/muziro_01/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/62895334967287?text=Halo%20kak,%20permisi,%20Saya%20mau%20%20konsultasi%20terkait%20jasa%20dari%20Sunshine%20ini" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="https://goo.gl/maps/MNRSzmHS9deE2jJaA" target="_blank"><i class="fa fa-map-marker"></i></a></li>
                     </ul>
                 </div>  
             </div>

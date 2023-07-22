@@ -6,7 +6,6 @@
 }
 
 
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
@@ -62,12 +61,17 @@ nav {
     80%  { background: #33CC36; }
     100% { background: #33CCCC; }
   } 
-
-  .home {
+ .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
     animation: color 9s infinite linear; 
-} */
+}  */
 
-/* .home {
+
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,13 +83,14 @@ nav {
     margin: 0;
     font-size: 120px;
     color: rgba(225,225,225, .01);
-    background-image: url("https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2cf549433129d4227d1879347b9e78ce&auto=format&fit=crop&w=1248&q=80");
+    background-image: url(content3.jpg);
     background-repeat: repeat;
     -webkit-background-clip: text;
     animation: animate 15s ease-in-out infinite;
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
+    -webkit-animation: animate 15s ease-in-out infinite;
 }
 
 
@@ -102,9 +107,9 @@ nav {
     75% {
         background-position: right top;
     }   
-}  */
+} 
 
-.home {
+/* .home {
     background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -119,7 +124,7 @@ nav {
 .home h1 {
     text-align: center;
     color: #ffffff;
-}
+} */
 
 .home .home-content {
     width: 100%;
@@ -174,8 +179,6 @@ nav {
     max-height: 200px;
     color: #ffffff;
 }
-
-
 
 .content {
     background-color: #ffffff;
@@ -387,14 +390,14 @@ nav {
 
 .detail-desc {
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     flex-basis: 50%;
+    justify-content: space-between;
     width: 50%;
     height: 100%;
     padding: 20px 20px;
     border: 1px solid #634100;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -409,6 +412,23 @@ nav {
 
 .detail-desc p {
     margin-bottom: 20px;
+}
+
+.detail-desc-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.detail-desc-one, .detail-desc-two {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.detail-desc-content ul{
+    list-style: none;
 }
 
 .detail-button {
@@ -452,6 +472,9 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
+    .home h1 {
+        font-size: 100px;
+    }
     .detail {
         height: 220vh;
     }
@@ -472,6 +495,9 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    .home h1 {
+        font-size: 70px;
+    }
     .content {
         height: 180vh;
     }
@@ -487,6 +513,16 @@ nav {
 @media screen and (max-width: 576px) {
     .navbar ul {
         width: 50%;
+    }
+    .home h1 {
+        font-size: 50px;
+    }
+    .home .home-button {
+        background-color: #F2EAD3;
+        padding: 6px 40px;
+    }
+    .home .home-button a {
+        font-size: 14px;
     }
     .card {
         flex-basis: 100%;
